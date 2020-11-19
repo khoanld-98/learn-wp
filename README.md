@@ -1,2 +1,3 @@
 # example-wp-docker-compose
-docker-compose up -d
+Thực hiện lệnh: `docker-compose up -d`
+Bài viết tham khảo >>> https://tuanntblog.com/docker-wordpress-nginx/
