@@ -12,6 +12,8 @@ services:
       - ./dbdata:/var/lib/mysql
       #- ./db/db.sql:/docker-entrypoint-initdb.d/install_wordpress.sql #if you have db.sql of project input here
     command: '--default-authentication-plugin=mysql_native_password'
+    ports:
+      - "3308:3306"  
     networks:
       - app-network
 
@@ -39,7 +41,7 @@ services:
     container_name: webserver-example
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - ./app:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
